@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8" />
+
+<meta name="viewport"
+
+content="width=device-width,
+
+initial-scale=1" />
+
+<title>My First HTML Page</title>
+
+<!-- Internal CSS (quick styling) -->
+
+<style>
+
+body { font-family: system-ui, Arial, sans-serif; margin: 2rem; line-height: 1.6;}
+
+header, nav, main, aside, footer { padding: 1rem; border-radius: 12px; border: 1px solid #ddd; margin-bottom: 1rem; }
+
+nav a { margin-right: .75rem; text-decoration: none; }
+
+.btn { padding: .5rem.9rem; border: 1px solid #888; border-radius: 8px; cursor: pointer; background: #f5f5f5; }
+
+table { border-collapse: collapse; width: 100%; }
+
+th, td { border: 1px solid #ccc; padding:.5rem; text-align: left; }
+
+img { max-width: 100%; height: auto; }
+
+code { background: #f2f2f2; padding:.1rem.3rem; border-radius: 4px; }
+
+</style>
+
+<!-- External CSS example -->
+
+<!-- <link rel="stylesheet"
+
+href="styles.css" /> -->
+
+</head>
+
+<body>
+
+<!-- Semantic header/navigation -->
+
+<header>
+
+<h1>Welcome to My Page</h1>
+
+<p>This is a simple HTML5 layout.</
+
+p>
+
+</header>
+
+<nav>
+
+<a href="#about">About</a>
+
+<a href="#list">List</a>
+
+<a href="#table">Table</a>
+
+<a href="#form">Form</a>
+
+</nav>
+
+<main>
+
+<!-- Text content -->
+
+<section id="about">
+
+<h2>About</h2>
+
+<p>HTML defines the
+
+<em>structure</em> of a web page using elements like
+
+<code>&lt;h1&gt;</code>,
+
+<code>&lt;p&gt;</code>,
+
+<code>&lt;a&gt;</code>, and more.</
+
+p>
+
+<p>Here's a link: <a href="https: //example.com" target="_blank"
+rel="noopener">Visit Example</a></p>
+
+<figure>
+
+<img src="https://via.placeholder .com/800x300" alt="Sample placeholder banner" />
+
+<figcaption>A responsive image with a caption.</figcaption>
+
+</figure>
+
+</section>
+
+<!- Lists ->
+
+<section id="list">
+
+<h2>Lists</h2>
+
+<h3>Unordered</h3>
+
+<ul>
+
+<li>HTML</li>
+
+<li>CSS</li>
+
+<li>JavaScript</li>
+
+</ul>
+
+<h3>Ordered</h3>
+
+<ol>
+
+<li>Plan</li>
+
+<li>Design</li>
+
+<li>Build</li>
+
+</ol>
+
+</section>
+
+<!-- Table ->
+
+<section id="table">
+
+<h2>Table</h2>
+
+<table>
+
+<thead>
+
+<tr><th>Topic</th><th>Status</
+
+th><th>Notes</th></tr>
+
+</thead>
+<tbody>
+
+<tr><td>HTML</td><td> </
+
+td><td>Structure</td></tr>
+
+<tr><td>CSS</td><td> </
+
+td><td>Styling</td></tr>
+
+<tr><td>JS</td><td> </
+
+td><td>Behavior</td></tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<!-- Form -->
+
+<section id="form">
+
+<h2>Form</h2>
+
+<form
+
+onsubmit="handleSubmit(event)">
+
+<label>
+
+Name:
+
+<input type="text" name="name"
+
+required />
+
+</label>
+
+<br /><br />
+
+<label>
+
+Email:
+
+<input type="email"
+
+name="email" required />
+
+</label>
+
+<br /><br />
+
+<label>
+
+Favorite Topic:
+
+<select name="topic">
+
+<option>HTML</option>
+
+<option>CSS</option>
+
+<option>JavaScript</option>
+</select>
+
+</label>
+
+<br /><br />
+
+<button class="btn"
+
+type="submit">Submit</button>
+
+</form>
+
+<p id="msg" aria-live="polite"></p>
+
+</section>
+
+</main>
+
+<!-- Sidebar -->
+
+<aside>
+
+<h3>Tip</h3>
+
+<p>Use the <code>&lt;main&gt;</code>, <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;aside&gt;</code>, and <code>&lt;footer&gt;</code> tags for semantic structure.</p>
+
+</aside>
+
+<footer>
+
+<small>&copy; 2025 My Site</
+
+small>
+
+</footer>
+
+<!-- JavaScript -->
+
+<script>
+
+function handleSubmit(e) {
+
+e.preventDefault();
+
+const data = new
+
+FormData(e.target);
+
+const name = data.get('name');
+document.getElementById('msg').
+
+textContent = Thanks, ${name}!
+
+Form submitted.;
+
+e.target.reset();
+
+}
+
+</script>
+
+</body>
+
+</html>
